@@ -1,0 +1,89 @@
+# ============================================================
+#  AnimatedNametags v2 - config.yml
+#  Los FORMATOS (lineas, colores, fondos...) estan en formats.yml
+#  y se editan comodamente con la GUI:  /ant gui
+#  Todo el texto usa MiniMessage: https://docs.advntr.dev/minimessage/format.html
+# ============================================================
+
+settings:
+  # Cada cuantos ticks se actualiza la animacion (1 = cada tick, 2 = recomendado).
+  update-interval-ticks: 2
+
+  # Oculta el nametag vanilla (usa un team del scoreboard).
+  hide-vanilla-nametags: true
+
+  # Oculta los nametags del plugin TAB (requiere TAB con nametag feature activa).
+  hide-tab-nametags: true
+
+  # Si el jugador ve su propio nametag (cada jugador puede cambiarlo con /ant self).
+  show-own-nametag: false
+
+  # Ocultar el nametag cuando el jugador tiene Invisibilidad (o esta en vanish).
+  hide-when-invisible: true
+
+  # Se ve a traves de bloques (como el vanilla).
+  see-through: true
+
+  # Comportamiento al agacharse: dim (se atenua), hide (se oculta), none (nada).
+  sneak-mode: dim
+
+  # Altura sobre la cabeza (en bloques).
+  y-offset: 0.25
+
+  # Tamano del texto (1.0 = normal).
+  scale: 1.0
+
+  # Ancho maximo de linea antes de hacer salto automatico.
+  line-width: 400
+
+  # Sombra del texto.
+  shadow: false
+
+  # Fondo: "default" (vanilla), "none" (transparente) o AARRGGBB / RRGGBB en hex.
+  background: "40000000"
+
+  # Distancia de vision (multiplicador, 1.0 = ~64 bloques).
+  view-range: 0.6
+
+  # Convierte codigos legacy (&c, &#ff0000, §c) a MiniMessage (util con PlaceholderAPI).
+  legacy-colors: true
+
+  # Mundos donde NO se muestran nametags.
+  disabled-worlds: []
+
+# ------------------------------------------------------------
+#  LUNAR CLIENT
+#  El servidor NO puede leer los ajustes de mods del cliente, asi que:
+#   - Cada jugador puede usar /ant self para ocultar/mostrar SU propio nametag.
+#   - Opcional: los usuarios de Lunar (canal lunarclient:apollo) no ven el suyo por defecto.
+# ------------------------------------------------------------
+lunar:
+  hide-own-nametag-for-lunar-users: false
+
+# ------------------------------------------------------------
+#  PRESETS DE COLORES
+#  Se usan en los formatos con {preset:nombre}. Ejemplo:
+#     <gradient:{preset:fire}:{phase}><player></gradient>
+# ------------------------------------------------------------
+presets:
+  fire: "#ff0000:#ffaa00:#ff0000"
+  ocean: "#00c6ff:#0072ff:#00c6ff"
+  neon: "#00ffd5:#7b2ff7:#ff00e5:#00ffd5"
+  gold: "#ffd700:#fff2a8:#ffd700"
+  candy: "#ff6ec7:#7873f5:#4adeff:#ff6ec7"
+  toxic: "#39ff14:#0f9b0f:#39ff14"
+
+messages:
+  prefix: "<gradient:#00ffd5:#7b2ff7><bold>AnimatedNametags</bold></gradient> <dark_gray>»</dark_gray> "
+  reloaded: "<green>Configuracion recargada.</green>"
+  refreshed: "<green>Nametags refrescados.</green>"
+  toggled-on: "<green>Nametag activado para <white><target></white>.</green>"
+  toggled-off: "<red>Nametag desactivado para <white><target></white>.</red>"
+  self-shown: "<green>Ahora ves tu propio nametag.</green>"
+  self-hidden: "<red>Ya no ves tu propio nametag.</red>"
+  preview-set: "<green>Previsualizando el formato <white><target></white>. Usa <white>/ant preview off</white> para quitarlo.</green>"
+  preview-off: "<green>Previsualizacion quitada.</green>"
+  format-not-found: "<red>Ese formato no existe.</red>"
+  no-permission: "<red>No tienes permiso.</red>"
+  player-not-found: "<red>Jugador no encontrado.</red>"
+  usage: "<gray>Uso: <white>/ant gui | toggle [jugador] | self | preview <id|off> | list | reload | refresh | debug</white></gray>"
