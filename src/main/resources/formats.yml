@@ -1,0 +1,44 @@
+formats:
+  owner:
+    permission: animatednametags.format.owner
+    priority: 200
+    animation-speed: 0.04
+    background-animation:
+      colors:
+      - 80FF0000
+      - 80FFAA00
+      - 80FF0000
+      speed: 0.01
+    icon:
+      material: NETHER_STAR
+      scale: 0.6
+      y-offset: 0.0
+    lines:
+    - frames:
+      - <gradient:{preset:fire}:{phase}><bold>★ OWNER ★</bold></gradient>
+      - <gradient:{preset:gold}:{phase}><bold>✦ OWNER ✦</bold></gradient>
+      interval: 20
+    - <gradient:{preset:fire}:{phase_rev}><player></gradient>
+    - <health_bar>
+  admin:
+    permission: animatednametags.format.admin
+    priority: 100
+    animation-speed: 0.04
+    shadow: true
+    lines:
+    - <gradient:#ff0055:#ffaa00:#ff0055:{phase}><bold>★ ADMIN ★</bold></gradient>
+    - <rainbow:{phase}><player></rainbow>
+    - <red>❤</red> <white><health></white>
+  vip:
+    permission: animatednametags.format.vip
+    priority: 50
+    animation-speed: 0.03
+    lines:
+    - <gradient:{preset:neon}:{phase}><bold>VIP</bold></gradient>
+    - <gradient:{preset:neon}:{phase_rev}><player></gradient>
+  default:
+    permission: ''
+    priority: 0
+    animation-speed: 0.02
+    lines:
+    - <gradient:#aaaaaa:#ffffff:#aaaaaa:{phase}><player></gradient>
